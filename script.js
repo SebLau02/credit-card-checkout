@@ -41,7 +41,6 @@ for (let i = 0; i < inputCardNumber.length; i++) {
 
 for (let i = 0; i < inputExpirationDate.length; i++) {
 	inputExpirationDate[i].addEventListener("keyup", (e) => {
-		console.log("coucou");
 		if (regexNumber.test(e.target.value)) {
 			expirationDate[i].innerHTML = e.target.value;
 
