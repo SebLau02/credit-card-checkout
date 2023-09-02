@@ -8,10 +8,10 @@
 	</head>
 	<body>
 		<section
-			class="bg-red-300 w-screen h-screen relative flex justify-end items-center font-mono"
+			class="bg-red-200 w-screen h-full min-h-screen relative flex justify-around items-center font-mono flex-col p-4 md:flex-row md:justify-end"
 		>
 			<div
-				class="card-front-face max-w-xs max-h-52 w-3/5 h-3/5 bg-gradient-to-bl from-blue-950 to-green-600 rounded-2xl flex flex-col pl-8 absolute top-1/4 left-1/4 z-10 shadow-2xl"
+				class="card-front-face max-w-xs max-h-36 sm:max-h-52 w-56 sm:w-3/5 h-screen bg-gradient-to-bl from-blue-950 to-green-600 rounded-2xl flex flex-col pl-8 md:absolute md:top-1/4 md:left-1/4 z-10 shadow-black shadow-md relative mb-4"
 			>
 				<div
 					class="w-1/5 h-fit absolute top-2 right-2 bg-zinc-50 rounded"
@@ -25,36 +25,47 @@
 				<img
 					src="utils/svg/elec-puce.svg"
 					alt="puce electronique de la CB"
-					class="w-1/5 h-1/5 mt-12"
+					class="w-1/5 h-1/5 mt-8 sm:mt-12"
 				/>
-				<div class="card-number-container flex mt-4 h-6">
-					<p class="card-number text-xl text-amber-400 mr-6"></p>
-					<p class="card-number text-xl text-amber-400 mr-6"></p>
-					<p class="card-number text-xl text-amber-400"></p>
+				<div class="card-number-container flex mt-2 sm:mt-4 h-6">
+					<p
+						class="card-number text-xs sm:text-xl text-amber-400 mr-2 sm:mr-6"
+					></p>
+					<p
+						class="card-number text-xs sm:text-xl text-amber-400 mr-2 sm:mr-6"
+					></p>
+					<p
+						class="card-number text-xs sm:text-xl text-amber-400"
+					></p>
 				</div>
 				<div class="ml-6">
-					<p class="text-xs">Expiration Date</p>
+					<p class="text-xs">Exp Date</p>
 					<p class="text-amber-400 w-fit flex">
-						<span class="date text-amber-400 block w-5"></span
-						>/<span class="date text-amber-400 block w-5"></span>
+						<span class="date block w-5 text-xs sm:text-sm"></span
+						><span class="text-xs sm:text-sm mr-1">/</span
+						><span class="date block w-5 text-xs sm:text-sm"></span>
 					</p>
 				</div>
-				<h2 class="owner text-amber-400 uppercase"></h2>
+				<p
+					class="owner text-amber-400 uppercase text-xs sm:text-sm"
+				></p>
 			</div>
 
 			<div
-				class="card-back-face max-w-xs max-h-52 w-3/5 h-3/5 bg-gradient-to-bl from-blue-950 to-green-600 rounded-2xl pt-6 absolute top-1/3 left-1/3 shadow-2xl"
+				class="card-back-face max-w-xs max-h-36 sm:max-h-52 w-56 sm:w-3/5 h-screen bg-gradient-to-bl from-blue-950 to-green-600 rounded-2xl pt-6 md:absolute md:top-1/3 md:left-1/3 shadow-black shadow-md relative aspect-w-16 aspect-h-9 mb-4"
 			>
 				<div class="w-full h-1/4 bg-black"></div>
 				<div
 					class="w-4/5 h-1/5 bg-slate-300 flex justify-end items-center ml-6 mt-4"
 				>
-					<p class="cryptogram mr-1 italic"></p>
+					<p class="cryptogram mr-1 italic text-xs sm:text-xl"></p>
 				</div>
 			</div>
 
-			<div
-				class="coord-field w-1/5 h-fit p-5 rounded-md bg-neutral-300 mr-96 shadow-2xl"
+			<form
+				action=""
+				method="POST"
+				class="coord-field w-8/12 max-w-xs h-fit p-5 rounded-md bg-neutral-300 md:mr-6 shadow-2xl shadow-black 2xl:mr-80"
 			>
 				<div class="secret-code-container flex flex-col py-5">
 					<label for="card-number">Card number</label>
@@ -62,23 +73,23 @@
 					<div class="flex w-10/12">
 						<input
 							type="text"
-							id="card-number"
 							name="card-number"
 							class="input-card-number rounded text-center w-1/3 mr-2"
 							maxlength="4"
+							required
 						/>
 						<input
 							type="text"
-							id="card-number"
 							name="card-number"
 							class="input-card-number rounded text-center w-1/3 mr-2"
 							maxlength="4"
+							required
 						/><input
 							type="text"
-							id="card-number"
 							name="card-number"
 							class="input-card-number rounded text-center w-1/3"
 							maxlength="4"
+							required
 						/>
 					</div>
 				</div>
@@ -89,17 +100,17 @@
 					<div class="flex w-2/4">
 						<input
 							type="text"
-							id="card-expiration-date"
 							name="card-expiration-date"
 							class="input-expiration-date rounded w-1/4 mr-2 text-center"
 							maxlength="2"
+							required
 						/>/
 						<input
 							type="text"
-							id="card-expiration-date"
 							name="card-expiration-date"
-							class="input-expiration-date rounded w-1/4 text-center"
+							class="input-expiration-date rounded w-1/4 text-center ml-2"
 							maxlength="2"
+							required
 						/>
 					</div>
 				</div>
@@ -108,28 +119,29 @@
 					<label for="card-owner">Owner</label>
 					<input
 						type="text"
-						id="card-owner"
 						name="card-owner"
 						maxlength="26 "
-						class="rounded text-center uppercase"
+						required
+						class="card-owner rounded text-center uppercase"
 					/>
 				</div>
 				<div class="secret-code-container flex flex-col py-5">
 					<label for="card-crypto">Cryptogram</label>
 					<input
 						type="text"
-						id="card-crypto"
 						name="card-crypto"
-						class="rounded w-1/5 text-center"
+						class="card-crypto rounded w-1/5 text-center"
 						maxlength="3"
+						required
 					/>
 				</div>
 				<button
-					class="bg-red-100 px-2 rounded shadow-2xl active:shadow-none"
+					type="submit"
+					class="bg-red-100 px-2 rounded shadow-sm shadow-black active:shadow-none active:translate-y-px"
 				>
 					Validate
 				</button>
-			</div>
+			</form>
 		</section>
 
 		<script src="script.js"></script>
