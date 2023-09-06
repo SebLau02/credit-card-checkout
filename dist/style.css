@@ -931,38 +931,38 @@ video {
   }
 }
 
-@media (min-width: 1536px) {
-  .\32xl\:ml-8 {
+@media (min-width: 2100px ) {
+  .\33xl\:ml-8 {
     margin-left: 2rem;
   }
 
-  .\32xl\:mt-8 {
+  .\33xl\:mt-8 {
     margin-top: 2rem;
   }
 
-  .\32xl\:max-h-80 {
+  .\33xl\:max-h-80 {
     max-height: 20rem;
   }
 
-  .\32xl\:max-w-4xl {
+  .\33xl\:max-w-4xl {
     max-width: 56rem;
   }
 
-  .\32xl\:max-w-lg {
+  .\33xl\:max-w-lg {
     max-width: 32rem;
   }
 
-  .\32xl\:text-2xl {
+  .\33xl\:text-2xl {
     font-size: 1.5rem;
     line-height: 2rem;
   }
 
-  .\32xl\:text-3xl {
+  .\33xl\:text-3xl {
     font-size: 1.875rem;
     line-height: 2.25rem;
   }
 
-  .\32xl\:text-xl {
+  .\33xl\:text-xl {
     font-size: 1.25rem;
     line-height: 1.75rem;
   }
