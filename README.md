@@ -28,3 +28,5 @@ You can visit it [here](https://seblau02.github.io/credit-card-checkout/)
 <img src="illustration/ccc1-3.png" alt="1" width="800">
 <img src="illustration/ccc2-3.png" alt="2" width="800">
 <img src="illustration/ccc3-3.png" alt="3" width="800">
+
+![alt text](illustration/ccc1-3.png | width=100)
