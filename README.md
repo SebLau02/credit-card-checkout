@@ -21,7 +21,7 @@ It's my firstime with tailwind so be lenient.
 
 You can visit it [here](https://seblau02.github.io/credit-card-checkout/)
 
-### Technologies: HTML, CSS, Javascript
+### Technologies: HTML, Tailwindcss, Javascript
 
 ### Images
 
