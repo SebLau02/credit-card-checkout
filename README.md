@@ -11,7 +11,7 @@ Formulaire d'entré de coordonées bancaire dynamique.
 Salut, voici ma version d'entrée de coordonées bancaire. C'est mon premier projet avec tailwind donc soyez indulgent.
 Il a été réalisé en HTML, tailwindcss et javascript.
 
-Vous pouvez le visiter [ici](https://seblau02.github.io/credit-card-checkout/)
+Je vous laisse le découvrir [ici](https://seblau02.github.io/credit-card-checkout/)
 
 ## En
 
